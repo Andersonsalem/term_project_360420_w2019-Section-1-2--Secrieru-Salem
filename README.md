@@ -7,6 +7,6 @@ There are three folders:
  - *data*: where you put any data that you generate, or that your code relies on for validation of your results
  - *report*: where you put files related to your final report
 
- Each folder has its own README.md, where you can include extract documentation for the reader.
+ Each folder has its own README.md, where you can include extra documentation for the reader.
 
  
