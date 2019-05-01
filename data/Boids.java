@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.geom.*;
-import static java.lang.Math.*;
+import java.lang.Math.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
