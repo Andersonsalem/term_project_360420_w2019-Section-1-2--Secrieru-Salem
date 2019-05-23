@@ -10,8 +10,7 @@ import javax.swing.Timer;
  
  
  //////////////////////////////////////////////////////////////////////////////////////////////
- /*Notes to Dragos : 
- IMPORTANT EVERYTHING THAT IS MEANT TO YOU MUST BE ERASED BEFORE BEING SUBMITTED
+ /*
  Every time you see a math functions without math before it it's because one 
  of the imported packages contains the class for the function so no need
  to write them as Math.(something)
@@ -110,14 +109,14 @@ class Boid {
         maxSpeed = 4.0;
         maxForce = 0.05;
     }
- //updates the position
+ //updates the velocity vectors
     void update() {
         velocity.add(acceleration);
         velocity.limit(maxSpeed);
         location.add(velocity);
         acceleration.mult(0);
     }
- //method in order to make the forces affect the boid pposition
+ //method in order to make the forces affect the boid position
     void applyForce(Vec force) {
         acceleration.add(force);
     }
@@ -151,7 +150,7 @@ class Boid {
         applyForce(rule3);
         applyForce(migrate);
     }
-	// Dragos ask DingYi or Zach for that one
+	
     void view(Graphics2D g, List<Boid> boids) {
         double sightDistance = 70;
         double peripheryAngle = PI * 0.85;
@@ -375,7 +374,7 @@ class Vec {
     static Vec sub(Vec v, Vec v2) {
         return new Vec(v.x - v2.x, v.y - v2.y);
     }
- //i dont remember and im tired
+ 
     static double dist(Vec v, Vec v2) {
         return sqrt((v.x - v2.x) * (v.x - v2.x) + (v.y - v2.y) * (v.y - v2.y));
     }
